@@ -1,0 +1,68 @@
+water = 5
+coke = 12
+sprite = 10
+gatorade = 7
+iced = 15
+
+
+
+def main():
+    print("*****************************************************************")
+    print("                Welcome to the vending machine!                    ")
+    print("******************************************************************")
+
+    print("Item:               Quantity:                   Code:             ")
+    print(f"Water               {water}                     1A          ")
+    print(f"Coke                {coke}                    2B          ")
+    print(f"Sprite              {sprite}                    3C          ")
+    print(f"Gatorade            {gatorade}                     4D          ")
+    print(f"Iced Tea            {iced}                    5E          ")
+main()
+while True:
+    x = input("Enter the code for the desired product, or enter 'y' to exit: ")
+    if x == "1A":
+        if water <= 0:
+            print("Not available")
+        else:
+            y = int(input("Enter the desired quantity"))
+            water-=y
+            print("Thank you for purchasing!")
+            main()
+    elif x == "2B":
+        if coke <= 0:
+            print("Not available")
+        else:
+            y = int(input("Enter the desired quantity"))
+            coke-=y
+            print("Thank you for purchasing!")
+            main()
+    elif x == "3C":
+        if sprite <= 0:
+            print("Not available")
+        else:
+            y = int(input("Enter the desired quantity"))
+            sprite-=y
+            print("Thank you for purchasing!")
+            main()
+    elif x == "4D":
+        if gatorade <= 0:
+            print("Not available")
+        else:
+            y = int(input("Enter the desired quantity"))
+            gatorade-=y
+            print("Thank you for purchasing!")
+            main()
+    elif x == "5E":
+        if iced <= 0:
+            print("Not available")
+        else:
+            y = int(input("Enter the desired quantity"))
+            iced-=y
+            print("Thank you for purchasing!")
+            main()
+    elif x == "y":
+        break
+
+    else:
+        print("Invalid product code or exit input. Try again")
+        main()
